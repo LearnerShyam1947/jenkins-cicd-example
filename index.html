@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Karnam Shyam">
+    <title>Karnam Shyam - Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="intro">
+            <h1>Hello, I'm Karnam Shyam</h1>
+            <p>Welcome to my portfolio website. I'm a web developer, designer, and content creator.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div>
+            <h2>About Me</h2>
+            <p>I'm a passionate web developer with experience in HTML, CSS, JavaScript, and modern frameworks. I love creating responsive websites and beautiful user experiences.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div>
+            <h2>My Portfolio</h2>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <img src="./images/istockphoto-1409329028-612x612.jpg" alt="Project 1">
+                    <p>Project 1 Description</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./images/istockphoto-1409329028-612x612.jpg" alt="Project 2">
+                    <p>Project 2 Description</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./images/istockphoto-1409329028-612x612.jpg" alt="Project 3">
+                    <p>Project 3 Description</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div>
+            <h2>Contact Me</h2>
+            <p>If you'd like to work with me or have any questions, feel free to reach out!</p>
+            <p>Email: yourname@example.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Karnam Shyam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll Script
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active navigation link as user scrolls
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

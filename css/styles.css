@@ -1,0 +1,165 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Header and navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+    color: #ffcc00; /* Active link color */
+}
+
+/* Home section */
+#home {
+    height: 100vh;
+    background-color: #005f73;
+    color: white;
+    display: grid; /* Use grid layout */
+    place-items: center; /* Center content both horizontally and vertically */
+    text-align: center;
+}
+
+#home .intro {
+    max-width: 800px;
+}
+
+#home .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#home .intro p {
+    font-size: 1.2rem;
+}
+
+/* About section */
+#about {
+    height: 100vh;
+    background-color: #ffffff;
+    display: grid; /* Use grid layout */
+    place-items: center; /* Center content both horizontally and vertically */
+    text-align: center;
+    padding: 20px;
+}
+
+#about .content {
+    max-width: 800px;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+/* Portfolio section */
+#portfolio {
+    height: 100vh;
+    background-color: #e9d8a6;
+    display: grid; /* Use grid layout */
+    place-items: center; /* Center content both horizontally and vertically */
+    text-align: center;
+    padding: 20px;
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-gallery {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create responsive grid */
+    gap: 30px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Contact section */
+#contact {
+    height: 100vh;
+    background-color: #ffffff;
+    display: grid; /* Use grid layout */
+    place-items: center; /* Center content both horizontally and vertically */
+    text-align: center;
+    padding: 20px;
+}
+
+#contact .content {
+    max-width: 800px;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
