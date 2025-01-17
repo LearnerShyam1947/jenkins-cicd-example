@@ -1,18 +1,11 @@
-# FROM nginx:latest
+# Use the lightweight Alpine image with HTTP server
+FROM httpd:alpine
 
-# EXPOSE 80
-
-# COPY index.html /usr/share/nginx/html/index.html
-
-FROM nginx:latest
+# Copy static assets to the container
+COPY index.html /usr/local/apache2/htdocs/index.html
+COPY css /usr/local/apache2/htdocs/css
+COPY js /usr/local/apache2/htdocs/js
+COPY images /usr/local/apache2/htdocs/images
 
 # Expose port 80
 EXPOSE 80
-
-# Copy index.html
-COPY index.html /usr/share/nginx/html/index.html
-
-# Copy css, js, and images folders to the appropriate directory in the container
-COPY css /usr/share/nginx/html/css
-COPY js /usr/share/nginx/html/js
-COPY images /usr/share/nginx/html/images
